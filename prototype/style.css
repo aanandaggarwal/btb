@@ -233,3 +233,70 @@ footer {
     color: #666;
 }
 
+.team, .history {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.profile {
+    display: flex;
+    margin-bottom: 30px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+
+.profile h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.profile p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.history h2 {
+    margin-top: 40px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.history p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* Ensuring responsiveness */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-img {
+        margin-bottom: 20px;
+    }
+
+    .team, .history {
+        padding: 15px;
+        margin: 20px 10px;
+    }
+}
+
