@@ -1,6 +1,6 @@
 /* CSS Document */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, Arial, Segoe UI sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
@@ -117,8 +117,10 @@ footer {
     text-align: center;
     font-size: 2.5em;
     color: #333;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     padding-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 .review-article {
@@ -230,3 +232,4 @@ footer {
     font-size: 1em;
     color: #666;
 }
+
