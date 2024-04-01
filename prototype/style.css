@@ -181,6 +181,17 @@ footer {
     text-decoration: underline;
 }
 
+.intro {
+    font-size: 1em;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    color: #666;
+    line-height: 1.6;
+    border-left: 4px solid #333;
+    border-right: 4px solid #333;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -201,6 +212,7 @@ footer {
 
 .gallery-item:hover {
     transform: translateY(-5px);
+	cursor: pointer;
 }
 
 .gallery-img {
