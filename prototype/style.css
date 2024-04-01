@@ -142,6 +142,10 @@ footer {
 	width: 500px;
     height: auto;
 }
+.article-image:hover {
+	cursor: pointer;
+}
+
 .article-quote {
     font-size: 1.2em;
     font-style: italic;
@@ -175,4 +179,44 @@ footer {
 
 .source:hover {
     text-decoration: underline;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px -10px;
+}
+
+.gallery-item {
+    width: calc(25% - 20px);
+    margin: 10px;
+    text-align: center;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.gallery-item-title {
+    font-size: 1.2em;
+    color: #333;
+    margin: 5px 0;
+}
+
+.gallery-item-album {
+    font-size: 1em;
+    color: #666;
 }
