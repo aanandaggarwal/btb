@@ -26,7 +26,10 @@ body {
 }
 
 .site-logo-image {
-  width: 150px;
+  position: relative;
+  max-width: 270px;
+  height: auto;
+  display: block;
 }
 
 .site-nav a:hover,
