@@ -8,13 +8,15 @@ body {
 
 @keyframes gradient {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
+
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
+
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
@@ -89,7 +91,8 @@ body {
 .showcase-item img {
   width: 100%;
   height: auto;
-  border-radius: 8px; /* Adds rounded corners to the images */
+  border-radius: 8px;
+  /* Adds rounded corners to the images */
 }
 
 .showcase-item h3 {
@@ -169,6 +172,7 @@ footer {
   width: 500px;
   height: auto;
 }
+
 .article-image:hover {
   cursor: pointer;
 }
@@ -196,14 +200,33 @@ footer {
 }
 
 .author {
+  display: flex;
+  justify-content: space-between;
   font-weight: bold;
+  vertical-align: middle;
 }
+
+.review-details {
+  float: right;
+}
+
+.star-rating {
+  display: inline-block;
+  color: black;
+  margin-right: 5px;
+  vertical-align: text-top;
+}
+
+.star-rating .fas {
+  font-size: 1em;
+}
+
 
 .source {
   display: block;
   text-decoration: none;
   text-align: center;
-  color: #1a0dab; /* link color */
+  color: #1a0dab;
 }
 
 .source:hover {
@@ -323,6 +346,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+
   .profile,
   .profile-alt {
     grid-template-columns: 1fr;
@@ -338,6 +362,83 @@ footer {
   .profile-alt {
     text-align: center;
   }
+}
+
+.timeline-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto;
+  margin-top: 0px;
+  padding: 20px;
+  padding-top: 0px;
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-heading {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+  position: relative;
+}
+
+.timeline-icon {
+  background: #333;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-content {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 10px;
+  margin: 20px;
+}
+
+.timeline-content h3 {
+  font-size: 1em;
+  color: #333;
+}
+
+.timeline-content p {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Line connecting */
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #ddd;
+  z-index: 1;
 }
 
 .accordion {

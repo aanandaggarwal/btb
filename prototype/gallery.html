@@ -1,73 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Artist Gallery</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="site-header">
-        <a class="site-logo" href="home.html">
-          <img
-            class="site-logo-image"
-            src="images/site-logo.svg"
-            alt="Beyond the Beats Logo"
-          />
-        </a>
-        <nav class="site-nav">
-          <a href="home.html">Home</a>
-          <a href="reviews.html">Reviews</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="gear.html">Gear</a>
-          <a href="about.html">About</a>
-        </nav>
-      </header>
-      <main>
-        <h1 class="main-heading" style="margin-bottom: 10px;">
-          Gallery of Icons
-        </h1>
 
-        <section class="intro">
-            <p>
-            This gallery aims to educate and inspire our visitors by showcasing
-            the depth and diversity of hip-hop's creative pioneers. Whether you
-            are a seasoned aficionado or new to the genre, these artists and
-            their works represent pivotal moments in hip-hop history,
-            breaking conventions and emphasizing artistic integrity.
-          </p>
-          <p>
-            The gallery is divided into two main sections: "The Lyricists" and "The
-            Innovators." Click on each section for a more detailed description. 
-          <p>
-        </section>
-        <section class="showcase-container">
-            <div class="accordion" onclick="toggleAccordion('lyricists-accordion')">
-                <h2 class="showcase-heading">The Lyricists</h2>
-            </div>
-            <div id="lyricists-accordion" class="accordion-content">
-                <p>"The Lyricists" section celebrates artists renowned for their
-                    compelling storytelling, complex rhymes, and depth of content. They
-                    have not only demonstrated exceptional skill in wordplay but have
-                    also pushed the boundaries of narrative and thematic exploration in
-                    hip-hop. Their work exemplifies the power of language in music,
-                    offering listeners layered experiences that resonate on multiple
-                    levels.</p>
-            </div>
-            
-            <div class="accordion" onclick="toggleAccordion('innovators-accordion')">
-                <h2 class="showcase-heading">The Innovators</h2>
-            </div>
-            <div id="innovators-accordion" class="accordion-content">
-                <p>"The Innovators" features artists who have redefined the
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Artist Gallery</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="site-header">
+      <a class="site-logo" href="home.html">
+        <img class="site-logo-image" src="images/site-logo.svg" alt="Beyond the Beats Logo" />
+      </a>
+      <nav class="site-nav">
+        <a href="home.html">Home</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="gear.html">Gear</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+    <main>
+      <h1 class="main-heading" style="margin-bottom: 10px;">
+        Gallery of Icons
+      </h1>
+
+      <section class="intro">
+        <p>
+          This gallery aims to educate and inspire our visitors by showcasing
+          the depth and diversity of hip-hop's creative pioneers. Whether you
+          are a seasoned aficionado or new to the genre, these artists and
+          their works represent pivotal moments in hip-hop history,
+          breaking conventions and emphasizing artistic integrity.
+        </p>
+        <p>
+          The gallery is divided into two main sections: "The Lyricists" and "The
+          Innovators." Click on each section for a more detailed description.
+        <p>
+      </section>
+      <section class="showcase-container">
+        <div class="accordion" onclick="toggleAccordion('lyricists-accordion')">
+          <h2 class="showcase-heading">The Lyricists</h2>
+        </div>
+        <div id="lyricists-accordion" class="accordion-content">
+          <p>"The Lyricists" section celebrates artists renowned for their
+            compelling storytelling, complex rhymes, and depth of content. They
+            have not only demonstrated exceptional skill in wordplay but have
+            also pushed the boundaries of narrative and thematic exploration in
+            hip-hop. Their work exemplifies the power of language in music,
+            offering listeners layered experiences that resonate on multiple
+            levels.</p>
+        </div>
+
+        <div class="accordion" onclick="toggleAccordion('innovators-accordion')">
+          <h2 class="showcase-heading">The Innovators</h2>
+        </div>
+        <div id="innovators-accordion" class="accordion-content">
+          <p>"The Innovators" features artists who have redefined the
             auditory experience of hip-hop. From genre-bending sounds to
             experimental beats, these artists have expanded the sonic palette of
             hip-hop, incorporating diverse influences to create something truly
             unique. Their contributions highlight the genre's capacity for
             evolution and its adaptability to various musical traditions.</p>
-            </div>
+        </div>
 
 
 
@@ -75,20 +73,12 @@
           <h2 class="showcase-heading">The Lyricists</h2>
           <div class="gallery">
             <div class="gallery-item">
-              <img
-                src="images/aesop-rock.jpg"
-                alt="Aesop Rock"
-                class="gallery-img"
-              />
+              <img src="images/aesop-rock.jpg" alt="Aesop Rock" class="gallery-img" />
               <h3 class="gallery-item-title">Aesop Rock</h3>
               <p class="gallery-item-album">None Shall Pass (2007)</p>
             </div>
             <div class="gallery-item">
-              <img
-                src="images/del-tha-funkee.jpg"
-                alt="Del Tha Funkee Homosapien"
-                class="gallery-img"
-              />
+              <img src="images/del-tha-funkee.jpg" alt="Del Tha Funkee Homosapien" class="gallery-img" />
               <h3 class="gallery-item-title">Del Tha Funkee Homosapien</h3>
               <p class="gallery-item-album">Both Sides of the Brain (2000)</p>
             </div>
@@ -98,31 +88,19 @@
               <p class="gallery-item-album">Operation: Doomsday (1999)</p>
             </div>
             <div class="gallery-item">
-              <img
-                src="images/earl-sweatshirt.jpeg"
-                alt="Earl Sweatshirt"
-                class="gallery-img"
-              />
+              <img src="images/earl-sweatshirt.jpeg" alt="Earl Sweatshirt" class="gallery-img" />
               <h3 class="gallery-item-title">Earl Sweatshirt</h3>
               <p class="gallery-item-album">Some Rap Songs (2018)</p>
             </div>
             <div class="gallery-item">
-              <img
-                src="images/black-thought.jpeg"
-                alt="Black Thought"
-                class="gallery-img"
-              />
+              <img src="images/black-thought.jpeg" alt="Black Thought" class="gallery-img" />
               <h3 class="gallery-item-title">Black Thought</h3>
               <p class="gallery-item-album">
                 Streams of Thought, Vol. 1 (2018)
               </p>
             </div>
             <div class="gallery-item">
-              <img
-                src="images/run-the-jewels.jpg"
-                alt="Run The Jewels"
-                class="gallery-img"
-              />
+              <img src="images/run-the-jewels.jpg" alt="Run The Jewels" class="gallery-img" />
               <h3 class="gallery-item-title">Black Thought</h3>
               <p class="gallery-item-album">
                 Run The Jewels 2 (2015)
@@ -135,11 +113,7 @@
           <h2 class="showcase-heading">The Innovators</h2>
           <div class="gallery">
             <div class="gallery-item">
-              <img
-                src="images/the-pharcyde.jpg"
-                alt="The Pharcyde"
-                class="gallery-img"
-              />
+              <img src="images/the-pharcyde.jpg" alt="The Pharcyde" class="gallery-img" />
               <h3 class="gallery-item-title">The Pharcyde</h3>
               <p class="gallery-item-album">
                 Bizarre Ride II the Pharcyde (1992)
@@ -151,61 +125,51 @@
               <p class="gallery-item-album">In Search Of... (2001)</p>
             </div>
             <div class="gallery-item">
-              <img
-                src="images/death-grips.jpg"
-                alt="Death Grips"
-                class="gallery-img"
-              />
+              <img src="images/death-grips.jpg" alt="Death Grips" class="gallery-img" />
               <h3 class="gallery-item-title">Death Grips</h3>
               <p class="gallery-item-album">The Money Store (2012)</p>
             </div>
             <div class="gallery-item">
-              <img
-                src="images/madlib.jpg"
-                alt="Madlib/Quasimoto"
-                class="gallery-img"
-              />
+              <img src="images/madlib.jpg" alt="Madlib/Quasimoto" class="gallery-img" />
               <h3 class="gallery-item-title">Madlib/Quasimoto</h3>
               <p class="gallery-item-album">The Unseen (2000)</p>
             </div>
             <div class="gallery-item">
-              <img
-                src="images/odd-future.jpg"
-                alt="Odd Future"
-                class="gallery-img"
-              />
+              <img src="images/odd-future.jpg" alt="Odd Future" class="gallery-img" />
               <h3 class="gallery-item-title">Odd Future</h3>
               <p class="gallery-item-album">The OF Tape Vol. 2 (2012)</p>
             </div>
             <div class="gallery-item">
-              <img
-                src="images/flying-lotus.jpg"
-                alt="Flying Lotus"
-                class="gallery-img"
-              />
+              <img src="images/flying-lotus.jpg" alt="Flying Lotus" class="gallery-img" />
               <h3 class="gallery-item-title">Flying Lotus</h3>
               <p class="gallery-item-album">You're Dead! (2014)</p>
             </div>
           </div>
         </section>
-      </main>
-      <footer>
-        <p>&copy; 2024 by Aanand Aggarwal. All rights reserved.</p>
-      </footer>
-    </div>
-    <script>
-        function toggleAccordion(accordionId) {
-            var accordions = document.getElementsByClassName('accordion-content');
-            for (var i = 0; i < accordions.length; i++) {
-                if (accordions[i].id === accordionId) {
-                    if (accordions[i].style.maxHeight) {
-                        accordions[i].style.maxHeight = null;
-                    } else {
-                        accordions[i].style.maxHeight = accordions[i].scrollHeight + "px";
-                    } 
-                } 
-            }
+    </main>
+    <footer>
+      <p>&copy; 2024 by Aanand Aggarwal. All rights reserved.</p>
+    </footer>
+  </div>
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('is-flipped');
+      });
+    });
+    function toggleAccordion(accordionId) {
+      var accordions = document.getElementsByClassName('accordion-content');
+      for (var i = 0; i < accordions.length; i++) {
+        if (accordions[i].id === accordionId) {
+          if (accordions[i].style.maxHeight) {
+            accordions[i].style.maxHeight = null;
+          } else {
+            accordions[i].style.maxHeight = accordions[i].scrollHeight + "px";
+          }
         }
-    </script>    
-  </body>
+      }
+    }
+  </script>
+</body>
+
 </html>
