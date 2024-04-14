@@ -1,12 +1,27 @@
 /* CSS Document */
 body {
   font-family: Helvetica, Arial, Segoe UI sans-serif;
-  background-color: #f0f0f0;
+  background: linear-gradient(-45deg, #c5c4c4, #524e4f, #949fa3, #212222);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 .wrapper {
   max-width: 1000px;
   margin: auto;
+  margin-top: 0px;
   background-color: #ffffff;
 }
 
