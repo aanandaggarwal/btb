@@ -27,17 +27,29 @@ body {
   }
 }
 
+/* Wrapper and Content Management */
 .wrapper {
   max-width: 1000px;
   margin: auto;
-  margin-top: 0px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px;
 }
 
 .text-wrapper {
   max-width: 900px;
 }
 
+/* Header and Navigation */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -47,7 +59,7 @@ body {
   color: #ffffff;
   position: sticky;
   top: 0;
-  z-index: 1000; /* Ensures the header is above other content */
+  z-index: 1000;
 }
 
 .site-header a {
@@ -115,6 +127,10 @@ body {
   color: #666;
 }
 
+.showcase-heading {
+  margin: auto;
+}
+
 footer {
   background-color: #333;
   color: #fff;
@@ -151,17 +167,16 @@ footer {
   }
 }
 
+/* Main Article Styling */
 .main-heading {
   text-align: center;
   font-size: 2.5em;
   color: #333;
   margin-top: 30px;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-bottom: 20px;
 }
 
 .review-article {
+  flex-grow: 1;
   margin: 20px;
   padding: 15px;
   background-color: #f8f8f8;
@@ -209,6 +224,56 @@ footer {
   font-style: italic;
 }
 
+/* Sidebar Styles */
+.sidebar {
+  width: 300px;
+  background-color: #f2f2f2;
+  padding: 30px;
+  padding-top: 0px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2{
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 1.8em;
+  text-decoration: underline;
+}
+.sidebar h3 {
+  color: #333;
+  margin-top: 15px;
+  text-wrap:nowrap;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  background-color: #ffffff;
+  margin: 10px 0px;
+  padding: 20px 40px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  text-wrap: pretty;
+
+}
+
+.sidebar a {
+  color: #1a0dab;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
 .author {
   display: flex;
   justify-content: space-between;
@@ -230,7 +295,6 @@ footer {
 .star-rating .fas {
   font-size: 1em;
 }
-
 
 .source {
   display: block;
@@ -481,8 +545,4 @@ footer {
   color: #333;
   border-radius: 8px;
   line-height: 1.6;
-}
-
-.showcase-heading {
-  margin: auto;
 }
