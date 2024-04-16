@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -11,10 +11,13 @@
 
 <body>
   <div class="wrapper">
+    <!-- Site Header with navigation and logo -->
     <header class="site-header">
+      <!-- Logo linking back to the home page for better SEO and navigation -->
       <a class="site-logo" href="home.html">
         <img class="site-logo-image" src="images/site-logo.svg" alt="Beyond the Beats Logo" />
       </a>
+      <!-- Main navigation for site pages -->
       <nav class="site-nav">
         <a href="home.html">Home</a>
         <a href="reviews.html">Reviews</a>
@@ -24,87 +27,175 @@
       </nav>
     </header>
     <main>
+      <!-- Main heading and introduction to the gallery page -->
       <h1 class="main-heading" style="margin-bottom: 10px;">
         Gallery of Icons
       </h1>
 
+      <!-- Introduction section providing context for the gallery -->
       <section class="intro">
         <p>
           This gallery aims to educate and inspire our visitors by showcasing
           the depth and diversity of hip-hop's creative pioneers. Whether you
           are a seasoned aficionado or new to the genre, these artists and
-          their works represent pivotal moments in hip-hop history,
-          breaking conventions and emphasizing artistic integrity.
+          their works serve as starting points for your musical journey.
         </p>
         <p>
           The gallery is divided into two main sections: "The Lyricists" and "The
-          Innovators." Click on each section for a more detailed description.
-        <p>
+          Innovators." Each section can be explored further by clicking on them.
+        </p>
       </section>
+
+      <!-- Accordion sections for organizing the gallery into thematic areas -->
       <section class="showcase-container">
+        <!-- Accordion for The Lyricists -->
         <div class="accordion" onclick="toggleAccordion('lyricists-accordion')">
           <h2 class="showcase-heading">The Lyricists</h2>
         </div>
         <div id="lyricists-accordion" class="accordion-content">
-          <p>"The Lyricists" section celebrates artists renowned for their
-            compelling storytelling, complex rhymes, and depth of content. They
-            have not only demonstrated exceptional skill in wordplay but have
-            also pushed the boundaries of narrative and thematic exploration in
-            hip-hop. Their work exemplifies the power of language in music,
-            offering listeners layered experiences that resonate on multiple
-            levels.</p>
+          <p>
+            "The Lyricists" section celebrates artists known for their
+            compelling storytelling and complex rhymes, providing depth and thematic exploration in hip-hop.
+          </p>
         </div>
 
+        <!-- Accordion for The Innovators -->
         <div class="accordion" onclick="toggleAccordion('innovators-accordion')">
           <h2 class="showcase-heading">The Innovators</h2>
         </div>
         <div id="innovators-accordion" class="accordion-content">
-          <p>"The Innovators" features artists who have redefined the
-            auditory experience of hip-hop. From genre-bending sounds to
-            experimental beats, these artists have expanded the sonic palette of
-            hip-hop, incorporating diverse influences to create something truly
-            unique. Their contributions highlight the genre's capacity for
-            evolution and its adaptability to various musical traditions.</p>
+          <p>
+            "The Innovators" section features artists who have redefined the
+            auditory experience of hip-hop through experimental beats and diverse influences.
+          </p>
         </div>
 
 
-
+        <!-- Detailed gallery of artists under the Lyricists category -->
         <section class="showcase-container">
           <h2 class="showcase-heading">The Lyricists</h2>
           <div class="gallery">
+            <!-- Detailed artist entries with images and descriptions -->
+            <!-- Each gallery item includes a detailed table with information about the artist -->
             <div class="gallery-item">
+              <!-- Gallery entry for Aesop Rock -->
               <img src="images/aesop-rock.jpg" alt="Aesop Rock" class="gallery-img" />
               <h3 class="gallery-item-title">Aesop Rock</h3>
-              <p class="gallery-item-album">None Shall Pass (2007)</p>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>Northport, NY</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a href="https://www.youtube.com/watch?v=nSRgmXF5VeE" target="_blank">None Shall Pass (2007)</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Dense, lyrically complex, abstract</td>
+                </tr>
+              </table>
             </div>
             <div class="gallery-item">
+              <!-- Gallery entry for Del Tha Funkee Homosapien -->
               <img src="images/del-tha-funkee.jpg" alt="Del Tha Funkee Homosapien" class="gallery-img" />
               <h3 class="gallery-item-title">Del Tha Funkee Homosapien</h3>
-              <p class="gallery-item-album">Both Sides of the Brain (2000)</p>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>Oakland, CA</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a href="https://www.youtube.com/watch?v=kJdL5onCfLw" target="_blank">Both Sides of the Brain
+                      (2000)</a></td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Funky, innovative, alternative hip hop</td>
+                </tr>
+              </table>
             </div>
             <div class="gallery-item">
+              <!-- Gallery entry for MF DOOM -->
               <img src="images/mf-doom.jpg" alt="MF DOOM" class="gallery-img" />
               <h3 class="gallery-item-title">MF DOOM</h3>
-              <p class="gallery-item-album">Operation: Doomsday (1999)</p>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>London, UK / New York, USA</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a href="https://www.youtube.com/watch?v=p7REodOKz_Q" target="_blank">Operation: Doomsday
+                      (1999)</a></td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Mysterious, sample-heavy, intricate rhymes</td>
+                </tr>
+              </table>
             </div>
             <div class="gallery-item">
+              <!-- Gallery entry for Earl Sweatshirt -->
               <img src="images/earl-sweatshirt.jpeg" alt="Earl Sweatshirt" class="gallery-img" />
               <h3 class="gallery-item-title">Earl Sweatshirt</h3>
-              <p class="gallery-item-album">Some Rap Songs (2018)</p>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>Los Angeles, CA</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a href="https://www.youtube.com/watch?v=SrcY1UsxtIk" target="_blank">Some Rap Songs (2018)</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Dark, introspective, poetic</td>
+                </tr>
+              </table>
             </div>
             <div class="gallery-item">
+              <!-- Gallery entry for Black Thought -->
               <img src="images/black-thought.jpeg" alt="Black Thought" class="gallery-img" />
               <h3 class="gallery-item-title">Black Thought</h3>
-              <p class="gallery-item-album">
-                Streams of Thought, Vol. 1 (2018)
-              </p>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>Philadelphia, PA</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a href="https://www.youtube.com/watch?v=aNirkI48Sfw" target="_blank">Streams of Thought, Vol. 1
+                      (2018)</a></td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Conscious, intellectual, powerful</td>
+                </tr>
+              </table>
             </div>
             <div class="gallery-item">
+              <!-- Gallery entry for Run The Jewels -->
               <img src="images/run-the-jewels.jpg" alt="Run The Jewels" class="gallery-img" />
-              <h3 class="gallery-item-title">Black Thought</h3>
-              <p class="gallery-item-album">
-                Run The Jewels 2 (2015)
-              </p>
+              <h3 class="gallery-item-title">Run The Jewels</h3>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>Brooklyn, NY / Atlanta, GA</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a href="https://www.youtube.com/watch?v=xEoXZp1C_YY" target="_blank">Run The Jewels 2 (2015)</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Aggressive, socially aware, energetic</td>
+                </tr>
+              </table>
             </div>
           </div>
         </section>
@@ -113,45 +204,136 @@
           <h2 class="showcase-heading">The Innovators</h2>
           <div class="gallery">
             <div class="gallery-item">
+              <!-- Gallery entry for The Pharcyde -->
               <img src="images/the-pharcyde.jpg" alt="The Pharcyde" class="gallery-img" />
               <h3 class="gallery-item-title">The Pharcyde</h3>
-              <p class="gallery-item-album">
-                Bizarre Ride II the Pharcyde (1992)
-              </p>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>Los Angeles, CA</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a href="https://www.youtube.com/watch?v=2Z8R-B0bL5c&list=PLC80P4gsPr-YJMATtb2oh34aWl0ggDONh"
+                      target="_blank">Bizarre Ride II the Pharcyde (1992)</a></td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Alternative, humorous, mellow grooves</td>
+                </tr>
+              </table>
             </div>
             <div class="gallery-item">
+              <!-- Gallery entry for N.E.R.D -->
               <img src="images/nerd.jpg" alt="N.E.R.D" class="gallery-img" />
               <h3 class="gallery-item-title">N.E.R.D</h3>
-              <p class="gallery-item-album">In Search Of... (2001)</p>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>Los Angeles, CA</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a
+                      href="https://www.youtube.com/watch?v=pczoZ6Mpkd8&list=PLBxu7MPeD3MyOdrUEguFDdnvjMFaMhN6G&index=1"
+                      target="_blank">In Search Of... (2001)</a></td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Rock-infused, funk, experimental hip hop</td>
+                </tr>
+              </table>
             </div>
             <div class="gallery-item">
+              <!-- Gallery entry for Death Grips -->
               <img src="images/death-grips.jpg" alt="Death Grips" class="gallery-img" />
               <h3 class="gallery-item-title">Death Grips</h3>
-              <p class="gallery-item-album">The Money Store (2012)</p>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>Sacramento, CA</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a href="https://www.youtube.com/watch?v=gGujOBeu37Y" target="_blank">The Money Store (2012)</a>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Experimental, abrasive, electronic</td>
+                </tr>
+              </table>
             </div>
             <div class="gallery-item">
+              <!-- Gallery entry for Madlib -->
               <img src="images/madlib.jpg" alt="Madlib/Quasimoto" class="gallery-img" />
               <h3 class="gallery-item-title">Madlib/Quasimoto</h3>
-              <p class="gallery-item-album">The Unseen (2000)</p>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>Oxnard, CA</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a href="https://www.youtube.com/watch?v=9_7fk2UpYzM&list=PL5SMXYhIcZ5Ik8cZ2MDIJljneM3jNzEx3"
+                      target="_blank">The Unseen (2000)</a></td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Eclectic, jazz-infused, lo-fi beats</td>
+                </tr>
+              </table>
             </div>
             <div class="gallery-item">
+              <!-- Gallery entry for Odd Future -->
               <img src="images/odd-future.jpg" alt="Odd Future" class="gallery-img" />
               <h3 class="gallery-item-title">Odd Future</h3>
-              <p class="gallery-item-album">The OF Tape Vol. 2 (2012)</p>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>Oxnard, CA</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a href="https://www.youtube.com/watch?v=SPRthm6dRXo" target="_blank">The OF Tape Vol. 2
+                      (2012)</a></td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Alternative hip hop, rebellious, creative collective</td>
+                </tr>
+              </table>
             </div>
             <div class="gallery-item">
+              <!-- Gallery entry for Flying Lotus -->
               <img src="images/flying-lotus.jpg" alt="Flying Lotus" class="gallery-img" />
               <h3 class="gallery-item-title">Flying Lotus</h3>
-              <p class="gallery-item-album">You're Dead! (2014)</p>
+              <table class="artist-info">
+                <tr>
+                  <th>From...</th>
+                  <td>Oxnard, CA</td>
+                </tr>
+                <tr>
+                  <th>Listen to...</th>
+                  <td><a href="https://www.youtube.com/watch?v=SKIWYJ0B5zQ&list=PLAZ4OgxgpTHMxJlryh2BHeIW1CC1wZ1NW"
+                      target="_blank">You're Dead! (2014)</a></td>
+                </tr>
+                <tr>
+                  <th>Their sound is...</th>
+                  <td>Experimental electronic, jazz fusion, multi-genre</td>
+                </tr>
+              </table>
             </div>
           </div>
         </section>
     </main>
+    <!-- Site footer with copyright information -->
     <footer>
       <p>&copy; 2024 by Aanand Aggarwal. All rights reserved.</p>
     </footer>
   </div>
   <script>
+    // JavaScript functions to manage accordion behavior for mobile and desktop views
     document.querySelectorAll('.card').forEach(card => {
       card.addEventListener('click', () => {
         card.classList.toggle('is-flipped');

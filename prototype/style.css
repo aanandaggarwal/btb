@@ -1,4 +1,6 @@
 /* CSS Document */
+
+/* Global reset to remove default margin and padding, and set full width and height to HTML and body */
 html,
 body {
   margin: 0;
@@ -7,13 +9,15 @@ body {
   height: 100%;
 }
 
+/* Set default font and background with a linear gradient, animated over 45 seconds */
 body {
   font-family: Helvetica, Arial, Segoe UI sans-serif;
-  background: linear-gradient(-45deg, #c5c4c4, #524e4f, #949fa3, #212222);
-  background-size: 400% 400%;
-  animation: gradient 30s ease infinite;
+  background: linear-gradient(-45deg, #c5c4c4, #310151, #0f0927, #033a00);
+  background-size: 800% 1000%;
+  animation: gradient 45s ease infinite;
 }
 
+/* Keyframes for background animation to create a dynamic visual effect */
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -28,7 +32,7 @@ body {
   }
 }
 
-/* Wrapper and Content Management */
+/* Wrapper styling for maximum width, centered with a white background, flexible layout */
 .wrapper {
   max-width: 1000px;
   margin: auto;
@@ -38,6 +42,7 @@ body {
   align-items: stretch;
 }
 
+/* Flexbox layout for main content area, allowing responsive adjustments */
 .content {
   display: flex;
   flex-direction: row;
@@ -76,6 +81,7 @@ body {
   display: block;
 }
 
+/* Styling for navigation links including hover effects */
 .site-nav a:hover,
 .site-nav a:focus {
   color: #c0bfbf;
@@ -99,12 +105,14 @@ body {
   margin: auto;
 }
 
+/* Flex container setup for showcasing elements, including responsive wrapping */
 .showcase-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
+/* Individual showcase items with responsive width adjustments */
 .showcase-item {
   width: 26%;
   margin: 15px;
@@ -115,7 +123,6 @@ body {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  /* Adds rounded corners to the images */
 }
 
 .showcase-item h3 {
@@ -132,6 +139,7 @@ body {
   margin: auto;
 }
 
+/* Footer with consistent background and text color, centered text */
 footer {
   background-color: #333;
   color: #fff;
@@ -166,9 +174,25 @@ footer {
   .site-nav a {
     margin: 10px 0;
   }
+
+  .profile,
+  .profile-alt {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .profile,
+  .profile-alt {
+    text-align: center;
+  }
 }
 
-/* Main Article Styling */
+/* Styling for main article headings, images, and body content */
 .main-heading {
   text-align: center;
   font-size: 2.5em;
@@ -263,7 +287,11 @@ footer {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   text-align: left;
   text-wrap: pretty;
+  transition: transform 0.3s ease;
+}
 
+.sidebar li:hover {
+  transform: translateY(-5px);
 }
 
 .sidebar a {
@@ -310,13 +338,15 @@ footer {
 }
 
 .intro {
-  font-size: 1em;
+  font-size: 1.0em;
   margin: auto;
-  max-width: 800px;
+  margin-top: 20px;
+  max-width: 850px;
   color: #666;
   line-height: 1.6;
 }
 
+/* Gallery Section */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -358,6 +388,62 @@ footer {
   color: #666;
 }
 
+/* Accordion Styles */
+.accordion {
+  cursor: pointer;
+  padding: 15px;
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: background-color 0.4s ease;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.accordion:hover {
+  background-color: #555;
+}
+
+.accordion-content {
+  max-height: 0;
+  text-align: center;
+  padding: 0 15px;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  margin: 10px 20px;
+  font-size: 16px;
+  color: #333;
+  border-radius: 8px;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.artist-info {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.artist-info th,
+.artist-info td {
+  text-align: left;
+  padding: 5px;
+}
+
+.artist-info th {
+  font-weight: bold;
+  color: #333;
+}
+
+.artist-info td {
+  color: #666;
+}
+
+/* Grid layout for user profiles, including image and text alignment, with responsive features */
 .team {
   display: flex;
   flex-direction: column;
@@ -421,25 +507,7 @@ footer {
   line-height: 1.5;
 }
 
-@media (max-width: 768px) {
-
-  .profile,
-  .profile-alt {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-img {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto;
-  }
-
-  .profile,
-  .profile-alt {
-    text-align: center;
-  }
-}
-
+/* Timeline Section */
 .timeline-container {
   width: 100%;
   max-width: 700px;
@@ -505,7 +573,7 @@ footer {
   line-height: 1.5;
 }
 
-/* Line connecting */
+/* Connection Line for Timeline */
 .timeline::after {
   content: "";
   position: absolute;
@@ -515,36 +583,4 @@ footer {
   width: 100%;
   background-color: #ddd;
   z-index: 1;
-}
-
-.accordion {
-  cursor: pointer;
-  padding: 15px;
-  background-color: #333;
-  color: #ffffff;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 20px;
-  transition: background-color 0.4s ease;
-  margin: 10px 0;
-  border-radius: 8px;
-}
-
-.accordion:hover {
-  background-color: #555;
-}
-
-.accordion-content {
-  max-height: 0;
-  text-align: center;
-  padding: 0 15px;
-  background-color: #f8f8f8;
-  overflow: hidden;
-  transition: max-height 0.4s ease-out;
-  margin: 10px 20px;
-  font-size: 16px;
-  color: #333;
-  border-radius: 8px;
-  line-height: 1.6;
 }
