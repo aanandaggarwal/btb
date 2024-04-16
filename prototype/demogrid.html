@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Grid Demo 2</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    color: #2a2a2a;
+    background: #5a5a5a;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 20px;
+    line-height: 150%;  /* adjust as needed */
+}
+
+.wrapper {
+    background: #ffffff;
+    width: 100%;  /* allow wrapper to adjust based on screen size */
+    margin: auto;  /* centering the wrapper */
+    padding: 1.25rem 2.5rem;
+    box-sizing: border-box;  /* includes padding and border in the width */
+}
+
+h1 {
+    text-align: center;
+    color: rgb(65, 31, 159);
+    margin-bottom: 2.5rem;
+}
+
+.profile-container-3 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-areas:
+        "doomp doom-bio doom-bio"
+        "quasp quas-bio quas-bio"
+        "phar-p phar-bio phar-bio";
+}
+
+.profile-port {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.profile-bio {
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .profile-container-3 {
+        grid-template-columns: 1fr;  /* stack items on smaller screens */
+        grid-template-areas:
+            "doomp"
+            "doom-bio"
+            "quasp"
+            "quas-bio"
+            "phar-p"
+            "phar-bio";
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 1rem;  /* reduce padding on smaller screens */
+    }
+    .profile-bio {
+        padding: 0.5rem;  /* adjust padding in bios for smaller screens */
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+    
+    <h1>Legendary Hip-Hop Artists</h1>
+    
+    <div class="profile-container-3">
+        <div class="profile-port doomp"><img src="images/mf-doom-grid.jpeg" alt="MF DOOM"></div>
+        <div class="profile-bio doom-bio"><p><strong>MF DOOM</strong> was known for his intricate lyrics and unique mask, which he wore as part of his iconic image. He influenced a generation with his complex narratives and abstract rhymes.</p></div>
+
+        <div class="profile-port quasp"><img src="images/quasimoto-grid.jpg" alt="Quasimoto"></div>
+        <div class="profile-bio quas-bio"><p><strong>Quasimoto</strong>, also known as Lord Quas, is an alter ego of Madlib. This character is known for his high-pitched voice and jazzy, lo-fi beats which add a distinct texture to his storytelling.</p></div>
+
+        <div class="profile-port phar-p"><img src="images/the-pharcyde-grid.jpg" alt="The Pharcyde"></div>
+        <div class="profile-bio phar-bio"><p><strong>The Pharcyde</strong> is a group celebrated for their light-hearted lyrics and innovative approach to hip-hop. Their work includes critical acclaim for albums like 'Bizarre Ride II the Pharcyde'.</p></div>
+    </div><!-- profile container ends -->
+    
+</div><!-- wrapper ends -->
+
+</body>
+</html>
