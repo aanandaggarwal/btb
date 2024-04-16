@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Artist Gallery</title>
   <link rel="stylesheet" href="style.css" type="text/css" />
+  <!-- Link to the FontAwesome CSS for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -59,21 +61,8 @@
           </p>
         </div>
 
-        <!-- Accordion for The Innovators -->
-        <div class="accordion" onclick="toggleAccordion('innovators-accordion')">
-          <h2 class="showcase-heading">The Innovators</h2>
-        </div>
-        <div id="innovators-accordion" class="accordion-content">
-          <p>
-            "The Innovators" section features artists who have redefined the
-            auditory experience of hip-hop through experimental beats and diverse influences.
-          </p>
-        </div>
-
-
         <!-- Detailed gallery of artists under the Lyricists category -->
         <section class="showcase-container">
-          <h2 class="showcase-heading">The Lyricists</h2>
           <div class="gallery">
             <!-- Detailed artist entries with images and descriptions -->
             <!-- Each gallery item includes a detailed table with information about the artist -->
@@ -200,9 +189,18 @@
           </div>
         </section>
 
-        <section class="showcase-container">
+        <!-- Accordion for The Innovators -->
+        <div class="accordion" onclick="toggleAccordion('innovators-accordion')">
           <h2 class="showcase-heading">The Innovators</h2>
-          <div class="gallery">
+        </div>
+        <div id="innovators-accordion" class="accordion-content">
+          <p>
+            "The Innovators" section features artists who have redefined the
+            auditory experience of hip-hop through experimental beats and diverse influences.
+          </p>
+        </div>
+        <section class="showcase-container">
+           <div class="gallery">
             <div class="gallery-item">
               <!-- Gallery entry for The Pharcyde -->
               <img src="images/the-pharcyde.jpg" alt="The Pharcyde" class="gallery-img" />
