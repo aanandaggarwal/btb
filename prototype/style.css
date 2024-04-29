@@ -586,3 +586,45 @@ footer {
   background-color: #ddd;
   z-index: 1;
 }
+
+#mapid {
+  height: 600px;
+  position: relative;
+  z-index: 0;
+}
+
+.map-controls {
+  display: flex;
+  justify-content: center;  /* Center the controls horizontally */
+  margin-top: 10px;  /* Space between the map and the controls */
+  z-index: 100;  /* Ensures controls are above other content if needed */
+}
+
+.map-control-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 5px 10px;  /* Smaller padding for smaller buttons */
+  cursor: pointer;
+  font-size: 18px;  /* Smaller font size */
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  margin: 0 5px;  /* Slight space between buttons */
+  outline: none;  /* Remove focus outline for aesthetics */
+}
+
+.map-control-button:hover {
+  background-color: #555;
+}
+
+.equipment {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.equipment img {
+  width: 100%;
+  max-width: 300px;
+}
