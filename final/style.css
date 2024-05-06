@@ -1,0 +1,630 @@
+/* CSS Document */
+
+/* Global reset to remove default margin and padding, and set full width and height to HTML and body */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Set default font and background with a linear gradient, animated over 45 seconds */
+body {
+  font-family: Helvetica, Arial, Segoe UI sans-serif;
+  background: linear-gradient(-45deg, #c5c4c4, #310151, #0f0927, #033a00);
+  background-size: 800% 1000%;
+  animation: gradient 45s ease infinite;
+}
+
+/* Keyframes for background animation to create a dynamic visual effect */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Wrapper styling for maximum width, centered with a white background, flexible layout */
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Flexbox layout for main content area, allowing responsive adjustments */
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px;
+}
+
+.text-wrapper {
+  max-width: 900px;
+}
+
+/* Header and Navigation */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.site-header a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.site-logo-image {
+  position: relative;
+  max-width: 270px;
+  height: auto;
+  display: block;
+}
+
+/* Styling for navigation links including hover effects */
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #c0bfbf;
+  text-decoration: underline;
+}
+
+.lead {
+  text-align: center;
+}
+
+.lead-display img {
+  max-width: 100%;
+  height: auto;
+}
+
+.showcase h2 {
+  text-align: center;
+}
+
+.showcase-heading {
+  margin: auto;
+}
+
+/* Flex container setup for showcasing elements, including responsive wrapping */
+.showcase-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+/* Individual showcase items with responsive width adjustments */
+.showcase-item {
+  width: 26%;
+  margin: 15px;
+  text-align: center;
+}
+
+.showcase-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.showcase-item h3 {
+  color: #333;
+  margin-top: 0px;
+}
+
+.showcase-item p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.showcase-heading {
+  margin: auto;
+}
+
+/* Footer with consistent background and text color, centered text */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.8em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .showcase-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .showcase-item {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .site-header,
+  .lead,
+  footer {
+    text-align: center;
+  }
+
+  .site-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-nav a {
+    margin: 10px 0;
+  }
+
+  .profile,
+  .profile-alt {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .profile,
+  .profile-alt {
+    text-align: center;
+  }
+}
+
+/* Styling for main article headings, images, and body content */
+.main-heading {
+  text-align: center;
+  font-size: 2.5em;
+  color: #333;
+  margin-top: 30px;
+}
+
+.review-article {
+  flex-grow: 1;
+  margin: 20px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.article-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+}
+
+.article-image:hover {
+  cursor: pointer;
+}
+
+.article-quote {
+  font-size: 1.2em;
+  font-style: italic;
+  margin: 20px 0;
+  padding: 10px 20px;
+  border-left: 5px solid #333;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+.article-body p {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  text-align: justify;
+  font-size: 1em;
+}
+
+.article-body em {
+  font-style: italic;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 300px;
+  background-color: #f2f2f2;
+  padding: 30px;
+  padding-top: 0px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 1.8em;
+  text-decoration: underline;
+}
+
+.sidebar h3 {
+  color: #333;
+  margin-top: 15px;
+  text-wrap: nowrap;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  background-color: #ffffff;
+  margin: 10px 0px;
+  padding: 20px 40px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  text-wrap: pretty;
+  transition: transform 0.3s ease;
+}
+
+.sidebar li:hover {
+  transform: translateY(-5px);
+}
+
+.sidebar a {
+  color: #1a0dab;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.author {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.review-details {
+  float: right;
+}
+
+.star-rating {
+  display: inline-block;
+  color: black;
+  margin-right: 5px;
+  vertical-align: text-top;
+}
+
+.star-rating .fas {
+  font-size: 1em;
+}
+
+.source {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #1a0dab;
+}
+
+.source:hover {
+  text-decoration: underline;
+}
+
+.intro {
+  font-size: 1.0em;
+  margin: auto;
+  margin-top: 20px;
+  max-width: 850px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Gallery Section */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px -10px;
+}
+
+.gallery-item {
+  width: calc(25% - 20px);
+  margin: 10px;
+  text-align: center;
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.gallery-item-title {
+  font-size: 1.2em;
+  color: #333;
+  margin: 5px 0;
+}
+
+.gallery-item-album {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Accordion Styles */
+.accordion {
+  cursor: pointer;
+  padding: 15px;
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  transition: background-color 0.4s ease;
+  margin: 10px 0;
+  border-radius: 8px;
+  margin-bottom: auto;
+}
+
+.accordion:hover {
+  background-color: #555;
+}
+
+.accordion-content {
+  max-height: 0;
+  text-align: center;
+  padding: 0 15px;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  margin: 10px 20px;
+  font-size: 16px;
+  color: #333;
+  border-radius: 8px;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.artist-info {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.artist-info th,
+.artist-info td {
+  text-align: left;
+  padding: 5px;
+}
+
+.artist-info th {
+  font-weight: bold;
+  color: #333;
+}
+
+.artist-info td {
+  color: #666;
+}
+
+/* Grid layout for user profiles, including image and text alignment, with responsive features */
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.profile:hover {
+  transform: translateY(-5px);
+}
+
+.profile-alt {
+  grid-template-columns: 1fr auto;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-text h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin: 0;
+}
+
+.profile-text p {
+  font-size: 1em;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.position {
+  font-size: 2em;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Timeline Section */
+.timeline-container {
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto;
+  margin-top: 0px;
+  padding: 20px;
+  padding-top: 0px;
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-heading {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 150px;
+  position: relative;
+}
+
+.timeline-icon {
+  background: #333;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-content {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 10px;
+  margin: 20px;
+}
+
+.timeline-content h3 {
+  font-size: 1em;
+  color: #333;
+}
+
+.timeline-content p {
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Connection Line for Timeline */
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+#mapid {
+  height: 600px;
+  position: relative;
+  z-index: 0;
+}
+
+.map-controls {
+  display: flex;
+  justify-content: center;  /* Center the controls horizontally */
+  margin-top: 10px;  /* Space between the map and the controls */
+  z-index: 100;  /* Ensures controls are above other content if needed */
+}
+
+.map-control-button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 5px 10px;  /* Smaller padding for smaller buttons */
+  cursor: pointer;
+  font-size: 18px;  /* Smaller font size */
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  margin: 0 5px;  /* Slight space between buttons */
+  outline: none;  /* Remove focus outline for aesthetics */
+}
+
+.map-control-button:hover {
+  background-color: #555;
+}
+
+.equipment {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.equipment img {
+  width: 100%;
+  max-width: 300px;
+}

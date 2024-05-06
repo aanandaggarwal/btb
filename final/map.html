@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Studio Equipment Map</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Site Header with navigation and logo -->
+        <header class="site-header">
+            <!-- Logo linking back to the home page for better navigation -->
+            <a class="site-logo" href="home.html">
+                <img class="site-logo-image" src="images/site-logo.svg" alt="Beyond the Beats Logo" />
+            </a>
+            <!-- Main navigation for site pages -->
+            <nav class="site-nav">
+                <a href="home.html">Home</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="gear.html">Gear</a>
+                <a href="about.html">About</a>
+            </nav>
+        </header>
+        <main>
+
+            <h1 class="main-heading">Map of My Studio</h1>
+            <article class="review-article">
+                <div id="mapid"></div>
+
+                <div class="map-controls">
+                    <button onclick="changePerspective('angle1')" class="map-control-button left-arrow">❮</button>
+                    <button onclick="changePerspective('angle2')" class="map-control-button right-arrow">❯</button>
+                </div>
+
+
+                <div class="equipment" id="mackie-monitors">
+                    <h2>Black and Gold Mackie Studio Monitors</h2>
+                    <img src="images/mackie-monitors.jpg" alt="Mackie Monitors">
+                    <p>These studio monitors provide excellent sound quality for mixing and mastering. I find them
+                        indispensable for achieving the right mix in my productions. They have a powerful, clear output
+                        that helps in identifying subtle nuances in the mix.</p>
+                    <a href="https://www.amazon.com/s?k=Black+and+Gold+Mackie+Studio+Monitors">Buy on Amazon</a>
+                </div>
+
+                <div class="equipment" id="universal-audio">
+                    <h2>Universal Audio Volt 2</h2>
+                    <p>The Universal Audio Volt 2 is a cornerstone for my recording sessions, providing pristine audio
+                        quality with minimal latency. Great for home studios and those starting out, but watch out for
+                        its gain levels to avoid clipping.</p>
+                    <a href="https://www.amazon.com/s?k=Universal+Audio+Volt+2">Buy on Amazon</a>
+                </div>
+
+                <div class="equipment" id="novation-keyboard">
+                    <h2>Novation FLKey 37</h2>
+                    <p>This keyboard integrates seamlessly with FL Studio, making it a fantastic choice for FL Studio
+                        users. The touch response and integration features speed up my workflow significantly.</p>
+                    <a href="https://www.amazon.com/s?k=Novation+FLKey+37">Buy on Amazon</a>
+                </div>
+
+                <div class="equipment" id="akai-mpc">
+                    <h2>Akai MPC One Retro Edition</h2>
+                    <p>The Akai MPC One is a beat-making powerhouse. Its retro look and feel inspire creativity. It's
+                        highly recommended for anyone into beat production, though it does come with a steep learning
+                        curve.</p>
+                    <a href="https://www.amazon.com/s?k=Akai+MPC+One+Retro+Edition">Buy on Amazon</a>
+                </div>
+
+                <div class="equipment" id="rode-microphone">
+                    <h2>Rode NT-1A</h2>
+                    <p>The Rode NT-1A is my go-to microphone for vocals due to its crystal-clear sound and low noise.
+                        Perfect for recording vocals and acoustic instruments. A must-have for any studio, provided you
+                        have a good pop filter.</p>
+                    <a href="https://www.amazon.com/s?k=Rode+NT-1A">Buy on Amazon</a>
+                </div>
+
+                <div class="equipment" id="logitech-keyboard">
+                    <h2>Logitech Wave K350 Keyboard</h2>
+                    <p>This ergonomic keyboard helps me avoid strain during long studio sessions. Its design and key
+                        response are good, though it might not be the best choice for those preferring mechanical
+                        keyboards.</p>
+                    <a href="https://www.amazon.com/s?k=Logitech+Wave+K350+Keyboard">Buy on Amazon</a>
+                </div>
+
+                <div class="equipment" id="plush-dog">
+                    <h2>My Little Plush Dog</h2>
+                    <p>This little plush dog is a great studio companion, providing comfort and a bit of home in the
+                        studio. It doesn't contribute to the sound, but it does help in maintaining a joyful
+                        environment.</p>
+                </div>
+
+                <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                <script>
+                    var bounds = [[0, 0], [1576, 2100]];  // Bounds of the map based on image dimensions
+                    var mymap = L.map('mapid', {
+                        crs: L.CRS.Simple,
+                        minZoom: -1,
+                        maxZoom: 2,
+                        maxBounds: bounds,
+                        maxBoundsViscosity: 1.0
+                    });
+
+                    var currentOverlay = L.imageOverlay('images/map.jpg', bounds).addTo(mymap);
+                    mymap.fitBounds(bounds);
+
+                    // Custom icons for markers
+                    var customIcons = {
+                        music: L.icon({
+                            iconUrl: 'images/music-solid.svg',
+                            iconSize: [30, 30],
+                            iconAnchor: [15, 30],
+                            popupAnchor: [0, -30]
+                        }),
+                        mic: L.icon({
+                            iconUrl: 'images/mic.svg',
+                            iconSize: [30, 30],
+                            iconAnchor: [15, 30],
+                            popupAnchor: [0, -30]
+                        }),
+                        // Define other icons similarly
+                    };
+
+                    // Items and their markers
+                    var items = {
+                        'mackie-monitors': {
+                            name: 'Black and Gold Mackie Studio Monitors',
+                            marker: L.marker([700, 600], { icon: customIcons.music }).addTo(mymap),
+                            positionAngle1: [700, 600],
+                            positionAngle2: [720, 610],
+                            link: '#mackie-monitors'
+                        },
+                        'universal-audio': {
+                            name: 'UA Volt 2',
+                            marker: L.marker([1000, 600], { icon: customIcons.mic }).addTo(mymap),
+                            positionAngle1: [700, 600],
+                            positionAngle2: [720, 610],
+                            link: '#universal-audio'
+                        },
+                        // Initialize other items similarly
+                    };
+
+                    // Function to initialize markers with tooltips and click events
+                    function initializeMarkers() {
+                        Object.keys(items).forEach(id => {
+                            var item = items[id];
+                            // Add tooltip
+                            item.marker.bindTooltip(item.name, { permanent: false, direction: 'top', opacity: 0.9 });
+                            // Add click event
+                            item.marker.on('click', function () {
+                                window.location.href = item.link; // Navigates to the section of the item
+                            });
+                        });
+                    }
+
+                    initializeMarkers();
+
+                    function changePerspective(angle) {
+                        var imageUrl = (angle === 'angle1') ? 'images/map.jpg' : 'images/map2.jpg';
+                        currentOverlay.setUrl(imageUrl);
+                        // Updating marker positions based on the angle
+                        Object.keys(items).forEach(id => {
+                            var item = items[id];
+                            var pos = (angle === 'angle1') ? item.positionAngle1 : item.positionAngle2;
+                            item.marker.setLatLng(mymap.unproject(pos, mymap.getMaxZoom()));
+                        });
+                    }
+
+                </script>
+        </main>
+        <!-- Footer section containing copyright notice -->
+        <footer>
+            <p>&copy; 2024 by Aanand Aggarwal. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
