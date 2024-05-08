@@ -1,328 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Studio Equipment Map</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
-</head>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <!-- Site Header with navigation and logo -->
-        <header class="site-header">
-            <!-- Logo linking back to the home page for better navigation -->
-            <a class="site-logo" href="home.html">
-                <img class="site-logo-image" src="images/site-logo.svg" alt="Beyond the Beats Logo" />
-            </a>
-            <!-- Main navigation for site pages -->
-            <nav class="site-nav">
-                <a href="home.html">Home</a>
-                <a href="reviews.html">Reviews</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="gear.html">Gear</a>
-                <a href="map.html">Studio</a>
-                <a href="about.html">About</a>
-            </nav>
-        </header>
-        <div class="content">
+      <!-- Site Header with navigation and logo -->
+      <header class="site-header">
+        <!-- Logo linking back to the home page for better navigation -->
+        <a class="site-logo" href="home.html">
+          <img
+            class="site-logo-image"
+            src="images/site-logo.svg"
+            alt="Beyond the Beats Logo"
+          />
+        </a>
+        <!-- Main navigation for site pages -->
+        <nav class="site-nav">
+          <a href="home.html">Home</a>
+          <a href="reviews.html">Reviews</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="gear.html">Gear</a>
+          <a href="map.html">Studio</a>
+          <a href="about.html">About</a>
+        </nav>
+      </header>
+      <div class="content">
         <main>
+          <h1 class="main-heading">Map of My Studio</h1>
+          <div id="mapid"></div>
+          <article class="review-article">
+            <div class="equipment" id="mackie-monitors">
+              <h2>Black and Gold Mackie Studio Monitors</h2>
+              <img src="images/mackie-monitors.jpg" alt="Mackie Monitors" />
+              <p>
+                These studio monitors provide excellent sound quality for mixing
+                and mastering. I find them indispensable for achieving the right
+                mix in my productions. They have a powerful, clear output that
+                helps in identifying subtle nuances in the mix. I would
+                recommend them for smaller studios, but also encourage buyers to
+                consider low-end muddiness and room acoustics.
+              </p>
+              <a
+                href="https://www.amazon.com/s?k=Black+and+Gold+Mackie+Studio+Monitors"
+                >Buy on Amazon</a
+              >
+            </div>
 
-            <h1 class="main-heading">Map of My Studio</h1>
-            <div id="mapid"></div>
-            <article class="review-article">
-                <div class="equipment" id="mackie-monitors">
-                    <h2>Black and Gold Mackie Studio Monitors</h2>
-                    <img src="images/mackie-monitors.jpg" alt="Mackie Monitors">
-                    <p>These studio monitors provide excellent sound quality for mixing and mastering. I find them
-                        indispensable for achieving the right mix in my productions. They have a powerful, clear output
-                        that helps in identifying subtle nuances in the mix. I would recommend them for smaller studios,
-                        but also encourage buyers to consider low-end muddiness and room acoustics.</p>
-                    <a href="https://www.amazon.com/s?k=Black+and+Gold+Mackie+Studio+Monitors">Buy on Amazon</a>
-                </div>
+            <div class="equipment" id="universal-audio">
+              <h2>Universal Audio Volt 2</h2>
+              <img src="images/ua-volt.jpg" alt="UA Volt 2 Audio Interface" />
+              <p>
+                The Universal Audio Volt 2 is a cornerstone for my recording
+                sessions, providing pristine audio quality with minimal latency.
+                Great for home studios and those starting out, but watch out for
+                its gain levels to avoid clipping.
+              </p>
+              <a href="https://www.amazon.com/s?k=Universal+Audio+Volt+2"
+                >Buy on Amazon</a
+              >
+            </div>
 
-                <div class="equipment" id="universal-audio">
-                    <h2>Universal Audio Volt 2</h2>
-                    <img src="images/ua-volt.jpg" alt="UA Volt 2 Audio Interface">
-                    <p>The Universal Audio Volt 2 is a cornerstone for my recording sessions, providing pristine audio
-                        quality with minimal latency. Great for home studios and those starting out, but watch out for
-                        its gain levels to avoid clipping.</p>
-                    <a href="https://www.amazon.com/s?k=Universal+Audio+Volt+2">Buy on Amazon</a>
-                </div>
+            <div class="equipment" id="novation-keyboard">
+              <h2>Novation FLKey 37</h2>
+              <img
+                src="images/novation.jpg"
+                alt="Novation FLKey 37 Keyboard MIDI Controller"
+              />
+              <p>
+                This keyboard integrates seamlessly with FL Studio, making it a
+                fantastic choice for FL Studio users. The touch response and
+                integration features speed up my workflow significantly. I
+                personally love using the onboard buttons to help with the
+                dubbing process.
+              </p>
+              <a href="https://www.amazon.com/s?k=Novation+FLKey+37"
+                >Buy on Amazon</a
+              >
+            </div>
 
-                <div class="equipment" id="novation-keyboard">
-                    <h2>Novation FLKey 37</h2>
-                    <img src="images/novation.jpg" alt="Novation FLKey 37 Keyboard MIDI Controller">
-                    <p>This keyboard integrates seamlessly with FL Studio, making it a fantastic choice for FL Studio
-                        users. The touch response and integration features speed up my workflow significantly. I
-                        personally love using the onboard buttons to help with the dubbing process.</p>
-                    <a href="https://www.amazon.com/s?k=Novation+FLKey+37">Buy on Amazon</a>
-                </div>
+            <div class="equipment" id="akai-mpc">
+              <h2>Akai MPC One Retro Edition</h2>
+              <img
+                src="images/akai-retro.jpg"
+                alt="AKAI MPC One Retro Edition"
+              />
+              <p>
+                The Akai MPC One is a beat-making powerhouse. Its retro look and
+                feel inspire creativity. It's highly recommended for anyone into
+                beat production, though it does come with a steep learning
+                curve. You can read more in my
+                <a href="gear.html">review article</a>.
+              </p>
+              <a href="https://www.amazon.com/s?k=Akai+MPC+One+Retro+Edition"
+                >Buy on Amazon</a
+              >
+            </div>
 
-                <div class="equipment" id="akai-mpc">
-                    <h2>Akai MPC One Retro Edition</h2>
-                    <img src="images/akai-retro.jpg" alt="AKAI MPC One Retro Edition">
-                    <p>The Akai MPC One is a beat-making powerhouse. Its retro look and feel inspire creativity. It's
-                        highly recommended for anyone into beat production, though it does come with a steep learning
-                        curve. You can read more in my <a href="gear.html">review article</a>.</p>
-                    <a href="https://www.amazon.com/s?k=Akai+MPC+One+Retro+Edition">Buy on Amazon</a>
-                </div>
+            <div class="equipment" id="rode-microphone">
+              <h2>Rode NT-1A</h2>
+              <img
+                src="images/rode.jpg"
+                alt="Rode NT-1A Condenser Microphone"
+              />
+              <p>
+                The Rode NT-1A is my go-to microphone for vocals due to its
+                crystal-clear sound and low noise. Perfect for recording vocals
+                across genres, I'd dub this a must-have for any home studio,
+                provided you have a good pop filter.
+              </p>
+              <a href="https://www.amazon.com/s?k=Rode+NT-1A">Buy on Amazon</a>
+            </div>
 
-                <div class="equipment" id="rode-microphone">
-                    <h2>Rode NT-1A</h2>
-                    <img src="images/rode.jpg" alt="Rode NT-1A Condenser Microphone">
-                    <p>The Rode NT-1A is my go-to microphone for vocals due to its crystal-clear sound and low noise.
-                        Perfect for recording vocals across genres, I'd dub this a must-have for any home studio,
-                        provided you
-                        have a good pop filter.</p>
-                    <a href="https://www.amazon.com/s?k=Rode+NT-1A">Buy on Amazon</a>
-                </div>
+            <div class="equipment" id="logitech-keyboard">
+              <h2>Logitech Wave K350 Keyboard</h2>
+              <img
+                src="images/logitech.jpg"
+                alt="Logitech Wave K350 Keyboard"
+              />
+              <p>
+                This ergonomic keyboard helps me avoid strain during long studio
+                sessions. Its design and key response are good, though it might
+                not be the best choice for those preferring mechanical
+                keyboards. It's definitely not essential, but I included it
+                because I love it.
+              </p>
+              <a href="https://www.amazon.com/s?k=Logitech+Wave+K350+Keyboard"
+                >Buy on Amazon</a
+              >
+            </div>
 
-                <div class="equipment" id="logitech-keyboard">
-                    <h2>Logitech Wave K350 Keyboard</h2>
-                    <img src="images/logitech.jpg" alt="Logitech Wave K350 Keyboard">
-                    <p>This ergonomic keyboard helps me avoid strain during long studio sessions. Its design and key
-                        response are good, though it might not be the best choice for those preferring mechanical
-                        keyboards. It's definitely not essential, but I included it because I love it.</p>
-                    <a href="https://www.amazon.com/s?k=Logitech+Wave+K350+Keyboard">Buy on Amazon</a>
-                </div>
+            <div class="equipment" id="fl-studio-21">
+              <h2>FL Studio 21</h2>
+              <img src="images/fl-studio-21.jpg" alt="FL Studio 21 DAW" />
+              <p>
+                Having used FL Studio for years, I've grown to appreciate its
+                unmatched Piano Roll and efficient Step Sequencer which greatly
+                enhance my production workflow. While FL Studio 21 continues to
+                impress with features like stem separation, it can be
+                resource-intensive and slow, which may not suit those with less
+                powerful setups. For an alternative with wider compatibility and
+                efficiency, consider Ableton Live or Logic Pro.
+              </p>
+              <a href="https://www.image-line.com/">Visit FL Studio</a>
+            </div>
 
-                <div class="equipment" id="fl-studio-21">
-                    <h2>FL Studio 21</h2>
-                    <img src="images/fl-studio-21.jpg" alt="FL Studio 21 DAW">
-                    <p>Having used FL Studio for years, I've grown to appreciate its unmatched Piano Roll and efficient
-                        Step Sequencer which greatly enhance my production workflow. While FL Studio 21 continues
-                        to impress with features like stem separation, it can be resource-intensive and slow, which may
-                        not suit those with
-                        less powerful setups. For an alternative with wider compatibility and efficiency, consider
-                        Ableton Live or
-                        Logic Pro.</p>
-                    <a href="https://www.image-line.com/">Visit FL Studio</a>
-                </div>
+            <div class="equipment" id="plush-dog">
+              <h2>My Little Plush Dog</h2>
+              <img src="images/dog.png" alt="dog" />
+              <p>
+                My little plush dog is a great studio companion, providing
+                comfort and a bit of home in the studio. He doesn't really
+                contribute to the sound, but it does help in maintaining
+                positive vibes.
+              </p>
+            </div>
+          </article>
 
-                <div class="equipment" id="plush-dog">
-                    <h2>My Little Plush Dog</h2>
-                    <img src="images/dog.png" alt="dog">
-                    <p>My little plush dog is a great studio companion, providing comfort and a bit of home in the
-                        studio. He doesn't really contribute to the sound, but it does help in maintaining positive
-                        vibes.</p>
-                </div>
-            </article>
+          <article class="review-article">
+            <h2 class="article-title">Behind the Beats: Visual Essay</h2>
+            <!-- Review meta information including author, star rating, and review publication date -->
+            <p class="author">
+              <strong>By: Aanand Aggarwal</strong>
+            </p>
 
-            <article class="review-article">
-                <h2 class="article-title">
-                    Behind the Beats: Visual Essay
-                </h2>
-                <!-- Review meta information including author, star rating, and review publication date -->
-                <p class="author">
-                    <strong>By: Aanand Aggarwal</strong>
-                </p>
+            <div class="article-body">
+              <p>
+                Welcome to the space where I get to escape the stress of life
+                through music production. This visual journey will cover
+                creating a song from scratch in my studio. From laying down the
+                first note to tweaking the final mix, let's dive into my
+                day-to-day of crafting hip-hop and R&B tracks.
+              </p>
 
-                <div class="article-body">
-                    <p>Welcome to the space where I get to escape the stress of life through music production. This
-                        visual journey will cover creating a song from scratch in my studio. From laying down the
-                        first note to tweaking the final mix, let's dive into my day-to-day of crafting hip-hop and R&B
-                        tracks.
-                    </p>
+              <h3>Initial Setup: Tuning Into Creativity</h3>
+              <img
+                src="images/studio-before.jpg"
+                alt="Studio overview"
+                class="essay-image"
+              />
+              <p class="caption">
+                The calm before the storm: my studio, ready for the sesh's
+                creativity.
+              </p>
+              <p>
+                Every productive session begins with setting the right
+                atmosphere. The process is almost ritualistic—adjusting the
+                lights, selecting the first reference/inspo track to break the
+                silence, and ensuring all gear is connected and running. My
+                routine allows me to more easily enter a flow state of focused
+                creativity.
+              </p>
 
+              <h3>The Beat Begins</h3>
+              <img
+                src="images/records.jpg"
+                alt="My record collection, featuring a range of hip-hop and rock classics through niche bargain finds."
+                class="essay-image"
+              />
+              <p class="caption">
+                The starting point of many tracks: my record collection.
+              </p>
+              <p>
+                The foundation of any track starts with a solid beat. Using the
+                Akai MPC, I sample old records, chop up beats, and lay down the
+                initial rhythm that will define the track. Oftentimes, it's much
+                easier to find the seed of an idea/feeling/vibe from the most
+                unlikely places. I love picking one of my obscure $1 records at
+                random, scratching through grooves, and chopping loops with the
+                pads on the MPC One.
+              </p>
 
-                    <h3>Initial Setup: Tuning Into Creativity</h3>
-                    <img src="images/studio-before.jpg" alt="Studio overview" class="essay-image">
-                    <p class="caption">The calm before the storm: my studio, ready for the sesh's creativity.</p>
-                    <p>Every productive session begins with setting the right atmosphere. The process is almost
-                        ritualistic—adjusting the lights, selecting the first reference/inspo track to break the
-                        silence, and
-                        ensuring all gear is connected and running. My routine allows me to more easily enter a flow
-                        state of focused creativity.</p>
+              <img
+                src="images/akai-active.jpg"
+                alt="Akai MPC One Retro Edition"
+                class="essay-image"
+              />
+              <p class="caption">
+                My MPC One takes in samples from my turntable, which I can then
+                manipulate and sequence.
+              </p>
 
-                    <h3>The Beat Begins</h3>
-                    <img src="images/records.jpg"
-                        alt="My record collection, featuring a range of hip-hop and rock classics through niche bargain finds." class="essay-image">
-                    <p class="caption">The starting point of many tracks: my record collection.</p>
-                    <p>The foundation of any track starts with a solid beat. Using the Akai MPC, I sample old records,
-                        chop up
-                        beats, and lay down the initial rhythm that will define the track. Oftentimes, it's much easier
-                        to find the seed of an idea/feeling/vibe from the most unlikely places. I love picking one of my
-                        obscure $1 records at random, scratching through grooves, and chopping loops with the pads
-                        on the MPC One.</p>
+              <img
+                src="images/novation-active.jpg"
+                alt="Novation FLKey 37"
+                class="essay-image"
+              />
+              <p class="caption">Adding melodies with the Novation FLKey 37.</p>
+              <p>
+                With a bassline, pulse, or some other rhythm in place, I start
+                to layer melodies and harmonies where they feel needed. I pick
+                different virtual instruments/synthesizers to achieve dynamic,
+                melodic, and rhythmic variation across the instrumental. The
+                Novation FLKey 37 is my tool of choice, as it integrates
+                directly with FL Studio to make MIDI recording much easier.
+              </p>
 
-                    <img src="images/akai-active.jpg" alt="Akai MPC One Retro Edition" class="essay-image">
-                    <p class="caption">My MPC One takes in samples from my turntable, which I can then manipulate and
-                        sequence.</p>
+              <h3>Making the Mix: Layering and Texturing</h3>
 
-                    <img src="images/novation-active.jpg" alt="Novation FLKey 37" class="essay-image">
-                    <p class="caption">Adding melodies with the Novation FLKey 37.</p>
-                    <p>With a bassline, pulse, or some other rhythm in place, I start to layer melodies and harmonies
-                        where they feel needed. I pick different virtual instruments/synthesizers to achieve dynamic,
-                        melodic, and rhythmic variation across the instrumental. The Novation FLKey 37 is my tool of
-                        choice, as it integrates directly with FL Studio to make MIDI recording much easier.</p>
+              <img
+                src="images/fl-active.jpg"
+                alt="FL Studio 21 Mixer Console, depicting different plug-ins and effects across tracks."
+                class="essay-image"
+              />
 
-                    <h3>Making the Mix: Layering and Texturing</h3>
+              <p>
+                Working with a combination of my studio monitors and headphones,
+                I work to refine the mix. The mixer in FL Studio 21 has an
+                intuitive layout that easily allows me to review track routing,
+                effect automation, and mixer inserts. One of my favorite
+                quality-of-life hacks is to save preset racks with plug-ins for
+                effects chains; for example, my "Strings" preset file will
+                automatically load all plug-ins in my typical string instrument
+                processing chain, set to my custom presets for quick
+                fine-tuning.
+              </p>
 
-                    <img src="images/fl-active.jpg"
-                        alt="FL Studio 21 Mixer Console, depicting different plug-ins and effects across tracks." class="essay-image">
+              <h3>Vocal Magic: Recording and Editing</h3>
+              <img
+                src="images/rode-active.jpg"
+                alt="Rode NT-1A Microphone"
+                class="essay-image"
+              />
+              <p class="caption">
+                I highly recommend the Rode NT-1A; a strong budget-friendly
+                choice for musicians.
+              </p>
+              <p>
+                Writing, editing, and recording vocals is definitely the hardest
+                part of the creative process for me. Especially since my musical
+                journey began as an instrumentalist and producer, I find myself
+                being overly critical of my lyricism and delivery. In a genre
+                like hip-hop, it's important to remain true to yourself and
+                confident in your work; thankfully, my Rode picks up a crystal
+                clear signal and allows me to process my vocal to my heart's
+                content.
+              </p>
 
-                    <p>Working with a combination of my studio monitors and headphones, I work to refine the mix. The
-                        mixer in FL Studio 21
-                        has an intuitive layout that easily allows me to review track routing, effect automation, and
-                        mixer inserts. One of my favorite quality-of-life hacks is to save preset racks with
-                        plug-ins for effects chains; for example, my "Strings" preset file will automatically load all
-                        plug-ins in my typical string instrument processing chain, set to my custom presets for quick
-                        fine-tuning.
-                    </p>
+              <img
+                src="images/volt-active.jpg"
+                alt="Universal Audio Volt 2"
+                class="essay-image"
+              />
+              <p class="caption">
+                The Volt 2 audio interface helps keep my mic signal clean,
+                strong, and monitored.
+              </p>
 
-                    <h3>Vocal Magic: Recording and Editing</h3>
-                    <img src="images/rode-active.jpg" alt="Rode NT-1A Microphone" class="essay-image">
-                    <p class="caption">I highly recommend the Rode NT-1A; a strong budget-friendly choice for musicians.
-                    </p>
-                    <p>Writing, editing, and recording vocals is definitely the hardest part of the creative process for
-                        me. Especially since my musical journey began
-                        as an instrumentalist and producer, I find myself being overly critical of my lyricism and
-                        delivery. In a genre like hip-hop, it's important to remain true to yourself and confident in
-                        your work;
-                        thankfully, my Rode picks up a crystal clear signal and allows me to process my vocal to my
-                        heart's content.
-                    </p>
+              <h3>Final Review: Listening and Tweaking</h3>
+              <img
+                src="images/studio-after.jpg"
+                alt="Studio at end of session"
+                class="essay-image"
+              />
+              <p class="caption">
+                Track review in the studio: a time for critical listening and
+                final adjustments.
+              </p>
+              <p>
+                As the late evening sets in, I take a break from producing and
+                come back for some critical listening. This stage is all about
+                fine-tuning, making minor adjustments to ensure the track plays
+                well across different listening platforms. It is definitely a
+                meticulous process, where I'll often upload multiple mixes to my
+                iCloud Drive to test across devices, but every small tweak
+                contributes to the track's overall quality. Besides, I wouldn't
+                be satisfied finishing a track without polishing it to the best
+                of my ability, so doing my due diligence here can help my song
+                stand stronger.
+              </p>
 
-                    <img src="images/volt-active.jpg" alt="Universal Audio Volt 2" class="essay-image">
-                    <p class="caption">The Volt 2 audio interface helps keep my mic signal clean, strong, and monitored.
-                    </p>
+              <p>
+                While I typically invite a friend or two over to join in the
+                process and/or record with me, the journey of today's studio
+                session is typical yet unique. Each day offers new opportunities
+                to evolve and there are always technical and creative challenges
+                along the way, testing my determination and confidence as a
+                musician. However, conquering these challenges brings a unique
+                excitement and fuels a collaborative fire to create. I am
+                eternally grateful for a space like my studio, equipped with
+                tools like the Akai MPC, Novation keyboard, and Rode mic that
+                let me express myself through such an amazing medium.
+              </p>
 
-                    <h3>Final Review: Listening and Tweaking</h3>
-                    <img src="images/studio-after.jpg" alt="Studio at end of session" class="essay-image">
-                    <p class="caption">Track review in the studio: a time for critical listening and final adjustments.
-                    </p>
-                    <p>As the late evening sets in, I take a break from producing and come back for some critical
-                        listening. This stage is all about fine-tuning, making
-                        minor adjustments to ensure the track plays well across different listening platforms. It is
-                        definitely a
-                        meticulous process, where I'll often upload multiple mixes to my iCloud Drive to test across
-                        devices, but every small tweak contributes to the track's overall quality. Besides, I wouldn't
-                        be satisfied finishing a track without polishing it to the best of my ability, so doing my due
-                        diligence here can help my song stand stronger.</p>
-
-                    <p>While I typically invite a friend or two over to join in the process and/or record with me, the
-                        journey of today's studio session is typical yet unique. Each day offers new opportunities to
-                        evolve and there are always technical and creative challenges along the way, testing my
-                        determination and confidence as a musician. However, conquering these challenges brings a unique
-                        excitement and fuels a collaborative fire to create. I am eternally grateful for a space like my
-                        studio, equipped with tools like the Akai MPC, Novation keyboard,
-                        and Rode mic that let me express myself through such an amazing medium.</p>
-
-                    <img src="images/gn-dog.jpg" alt="Good Night from my studio dog!" class="essay-image">
-                    <p class="caption">Farewell and until next time, from me and my pup!
-                    </p>
-                </div>
-            </article>
+              <img
+                src="images/gn-dog.jpg"
+                alt="Good Night from my studio dog!"
+                class="essay-image"
+              />
+              <p class="caption">
+                Farewell and until next time, from me and my pup!
+              </p>
+            </div>
+          </article>
         </main>
-    </div>
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script>
-            var bounds = [[0, 0], [1576, 2100]]; // Bounds of the map based on image dimensions
-            var mymap = L.map('mapid', {
-                crs: L.CRS.Simple,
-                minZoom: -1,
-                maxZoom: 2,
-                maxBounds: bounds,
-                maxBoundsViscosity: 1.0,
-                dragging: false,
-                touchZoom: false,
-                doubleClickZoom: false,
-                scrollWheelZoom: false,
-                boxZoom: false,
-                keyboard: false
+      </div>
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+      <script>
+        var bounds = [
+          [0, 0],
+          [1576, 2100],
+        ]; // Bounds of the map based on image dimensions
+        var mymap = L.map("mapid", {
+          crs: L.CRS.Simple,
+          minZoom: -1,
+          maxZoom: 2,
+          maxBounds: bounds,
+          maxBoundsViscosity: 1.0,
+          dragging: false,
+          touchZoom: false,
+          doubleClickZoom: false,
+          scrollWheelZoom: false,
+          boxZoom: false,
+          keyboard: false,
+        });
+
+        var currentOverlay = L.imageOverlay("images/map.jpg", bounds).addTo(
+          mymap
+        );
+        mymap.fitBounds(bounds);
+
+        // Custom icons for markers
+        var customIcons = {
+          music: L.icon({
+            iconUrl: "images/music-solid.svg",
+            iconSize: [30, 30],
+            iconAnchor: [15, 30],
+            popupAnchor: [0, -30],
+          }),
+          mic: L.icon({
+            iconUrl: "images/mic.svg",
+            iconSize: [30, 30],
+            iconAnchor: [15, 30],
+            popupAnchor: [0, -30],
+          }),
+          smiley: L.icon({
+            iconUrl: "images/smiley.svg",
+            iconSize: [30, 30],
+            iconAnchor: [15, 30],
+            popupAnchor: [0, -30],
+          }),
+        };
+
+        // Items and their markers
+        var items = {
+          "mackie-monitors": {
+            name: "Black and Gold Mackie Studio Monitors",
+            marker: L.marker([700, 1350], { icon: customIcons.music }).addTo(
+              mymap
+            ),
+            link: "#mackie-monitors",
+          },
+          "universal-audio": {
+            name: "Universal Audio Volt 2",
+            marker: L.marker([600, 750], { icon: customIcons.mic }).addTo(
+              mymap
+            ),
+            link: "#universal-audio",
+          },
+          "novation-keyboard": {
+            name: "Novation FLKey 37",
+            marker: L.marker([570, 1100], { icon: customIcons.music }).addTo(
+              mymap
+            ),
+            link: "#novation-keyboard",
+          },
+          "akai-mpc": {
+            name: "Akai MPC One Retro Edition",
+            marker: L.marker([600, 1700], { icon: customIcons.music }).addTo(
+              mymap
+            ),
+            link: "#akai-mpc",
+          },
+          "rode-microphone": {
+            name: "Rode NT-1A",
+            marker: L.marker([500, 1800], { icon: customIcons.mic }).addTo(
+              mymap
+            ),
+            link: "#rode-microphone",
+          },
+          "logitech-keyboard": {
+            name: "Logitech Wave K350 Keyboard",
+            marker: L.marker([400, 1100], { icon: customIcons.smiley }).addTo(
+              mymap
+            ),
+            link: "#logitech-keyboard",
+          },
+          "fl-studio": {
+            name: "Fl Studio 21 DAW",
+            marker: L.marker([1000, 700], { icon: customIcons.music }).addTo(
+              mymap
+            ),
+            link: "#logitech-keyboard",
+          },
+          "plush-dog": {
+            name: "My Little Plush Dog",
+            marker: L.marker([620, 950], { icon: customIcons.smiley }).addTo(
+              mymap
+            ),
+            link: "#plush-dog",
+          },
+        };
+
+        // Function to initialize markers with tooltips and click events
+        function initializeMarkers() {
+          Object.keys(items).forEach((id) => {
+            var item = items[id];
+            // Add tooltip
+            item.marker.bindTooltip(item.name, {
+              permanent: false,
+              direction: "top",
+              opacity: 0.9,
             });
+            // Add click event
+            item.marker.on("click", function () {
+              window.location.href = item.link; // Navigates to the section of the item
+            });
+          });
+        }
 
-            var currentOverlay = L.imageOverlay('images/map.jpg', bounds).addTo(mymap);
-            mymap.fitBounds(bounds);
-
-            // Custom icons for markers
-            var customIcons = {
-                music: L.icon({
-                    iconUrl: 'images/music-solid.svg',
-                    iconSize: [30, 30],
-                    iconAnchor: [15, 30],
-                    popupAnchor: [0, -30]
-                }),
-                mic: L.icon({
-                    iconUrl: 'images/mic.svg',
-                    iconSize: [30, 30],
-                    iconAnchor: [15, 30],
-                    popupAnchor: [0, -30]
-                }),
-                smiley: L.icon({
-                    iconUrl: 'images/smiley.svg',
-                    iconSize: [30, 30],
-                    iconAnchor: [15, 30],
-                    popupAnchor: [0, -30]
-                })
-            };
-
-            // Items and their markers
-            var items = {
-                'mackie-monitors': {
-                    name: 'Black and Gold Mackie Studio Monitors',
-                    marker: L.marker([700, 1350], { icon: customIcons.music }).addTo(mymap),
-                    link: '#mackie-monitors'
-                },
-                'universal-audio': {
-                    name: 'Universal Audio Volt 2',
-                    marker: L.marker([600, 750], { icon: customIcons.mic }).addTo(mymap),
-                    link: '#universal-audio'
-                },
-                'novation-keyboard': {
-                    name: 'Novation FLKey 37',
-                    marker: L.marker([570, 1100], { icon: customIcons.music }).addTo(mymap),
-                    link: '#novation-keyboard'
-                },
-                'akai-mpc': {
-                    name: 'Akai MPC One Retro Edition',
-                    marker: L.marker([600, 1700], { icon: customIcons.music }).addTo(mymap),
-                    link: '#akai-mpc'
-                },
-                'rode-microphone': {
-                    name: 'Rode NT-1A',
-                    marker: L.marker([500, 1800], { icon: customIcons.mic }).addTo(mymap),
-                    link: '#rode-microphone'
-                },
-                'logitech-keyboard': {
-                    name: 'Logitech Wave K350 Keyboard',
-                    marker: L.marker([400, 1100], { icon: customIcons.smiley }).addTo(mymap),
-                    link: '#logitech-keyboard'
-                },
-                'fl-studio': {
-                    name: 'Fl Studio 21 DAW',
-                    marker: L.marker([1000, 700], { icon: customIcons.music }).addTo(mymap),
-                    link: '#logitech-keyboard'
-                },
-                'plush-dog': {
-                    name: 'My Little Plush Dog',
-                    marker: L.marker([620, 950], { icon: customIcons.smiley }).addTo(mymap),
-                    link: '#plush-dog'
-                },
-            };
-
-            // Function to initialize markers with tooltips and click events
-            function initializeMarkers() {
-                Object.keys(items).forEach(id => {
-                    var item = items[id];
-                    // Add tooltip
-                    item.marker.bindTooltip(item.name, { permanent: false, direction: 'top', opacity: 0.9 });
-                    // Add click event
-                    item.marker.on('click', function () {
-                        window.location.href = item.link; // Navigates to the section of the item
-                    });
-                });
-            }
-
-            initializeMarkers();
-        </script>
-        <!-- Footer section containing copyright notice -->
-        <footer>
-            <p>&copy; 2024 by Aanand Aggarwal. All rights reserved.</p>
-        </footer>
+        initializeMarkers();
+      </script>
+      <!-- Footer section containing copyright notice -->
+      <footer>
+        <p>&copy; 2024 by Aanand Aggarwal. All rights reserved.</p>
+      </footer>
     </div>
-</body>
+  </body>
+</html>
