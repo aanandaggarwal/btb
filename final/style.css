@@ -101,18 +101,23 @@ body {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
 @keyframes textShadowPulse {
-  0%, 100% {
+
+  0%,
+  100% {
     text-shadow: 2px 2px 4px #000000;
   }
+
   50% {
     text-shadow: 0px 0px 2px #000000;
   }
@@ -193,60 +198,19 @@ footer {
   font-size: 0.8em;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .showcase-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .showcase-item {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .site-header,
-  .lead,
-  footer {
-    text-align: center;
-  }
-
-  .site-nav {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .site-nav a {
-    margin: 10px 0;
-  }
-
-  .profile,
-  .profile-alt {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-img {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto;
-  }
-
-  .profile,
-  .profile-alt {
-    text-align: center;
-  }
-}
-
 /* Styling for main article headings, images, and body content */
 .main-heading {
   text-align: center;
   font-size: 2.5em;
   color: #333;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .review-article {
-  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
   margin: 20px;
   padding: 15px;
   background-color: #f8f8f8;
@@ -254,18 +218,45 @@ footer {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.centered-image-link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
 .article-title {
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 2em;
+  color: #333;
   margin-bottom: 10px;
 }
 
 .article-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.essay-image {
+  display: block; 
+  margin: 0 auto; 
+  max-width: 600px;
+  width: 60%; 
+  height: auto; 
+  border-radius: 8px; 
+}
+
+
+.caption {
+  text-align: center;
+  display: block;
+  font-style: italic;
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 20px;
 }
 
 .article-image:hover {
@@ -385,8 +376,7 @@ footer {
 .intro {
   font-size: 1.0em;
   margin: auto;
-  margin-top: 20px;
-  max-width: 850px;
+  text-align: left;
   color: #666;
   line-height: 1.6;
 }
@@ -446,7 +436,7 @@ footer {
   color: #333;
 }
 
-.lyric-song{
+.lyric-song {
   font-weight: bold;
   font-style: normal;
   color: #666;
@@ -454,12 +444,14 @@ footer {
 }
 
 .lyric-song a {
-  color: #666; 
-  text-decoration: none; /* Removes underline */
+  color: #666;
+  text-decoration: none;
+  /* Removes underline */
 }
 
 .lyric-song a:hover {
-  text-decoration: underline; /* Adds underline on hover */
+  text-decoration: underline;
+  /* Adds underline on hover */
 }
 
 .influenced-artists {
@@ -489,12 +481,14 @@ footer {
 }
 
 .influenced-artists a {
-  color: #333; 
-  text-decoration: none; /* Removes underline */
+  color: #333;
+  text-decoration: none;
+  /* Removes underline */
 }
 
 .influenced-artists a:hover {
-  text-decoration: underline; /* Adds underline on hover */
+  text-decoration: underline;
+  /* Adds underline on hover */
 }
 
 /* Accordion Styles */
@@ -700,49 +694,151 @@ footer {
 }
 
 #mapid {
-  height: 600px;
+  height: 500px;
+  margin: 10px;
   position: relative;
   z-index: 0;
 }
 
-.map-controls {
-  display: flex;
-  justify-content: center;  /* Center the controls horizontally */
-  margin-top: 10px;  /* Space between the map and the controls */
-  z-index: 100;  /* Ensures controls are above other content if needed */
-}
-
-.map-control-button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 5px 10px;  /* Smaller padding for smaller buttons */
-  cursor: pointer;
-  font-size: 18px;  /* Smaller font size */
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-  margin: 0 5px;  /* Slight space between buttons */
-  outline: none;  /* Remove focus outline for aesthetics */
-}
-
-.map-control-button:hover {
-  background-color: #555;
-}
-
+/* Equipment items adjustments */
 .equipment {
-  margin-top: 20px;
+  flex: 1 1 48%;
+  /* Flex grow, flex shrink, and basis set to fill nearly half the row */
+  margin: 1%;
+  /* Horizontal margin to maintain spacing, remove vertical margin */
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  box-sizing: border-box;
+  /* Include padding and border in the element's total width */
 }
 
 .equipment img {
-  width: 100%; 
-  max-width: 300px;
-  margin: 0 auto; /* Centers the image horizontally within the flex container */
-  display: block; 
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  /* Centers the image horizontally within the flex container */
+  display: block;
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Adjust navigation for vertical layout on mobile */
+  .site-nav {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    /* Add space between logo and navigation links */
+  }
+
+  .site-nav a {
+    margin: 10px 0;
+    /* Space out navigation links */
+  }
+
+  /* Adjust the logo image size for smaller screens */
+  .site-logo-image {
+    max-width: 200px;
+    /* Reduce logo size */
+  }
+
+  /* Text and heading responsiveness */
+  .main-heading,
+  .article-title,
+  .showcase-item h3,
+  .sidebar h2,
+  .timeline-heading {
+    font-size: 1.8em;
+  }
+
+  /* Adjust content layout */
+  .content,
+  .review-article,
+  .gallery,
+  .profile,
+  .profile-alt,
+  .timeline,
+  .equipment {
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+  }
+
+  /* Gallery item width adjustment */
+  .gallery-item {
+    width: 100%;
+    /* Full width for better visibility */
+  }
+
+  /* Profile image adjustments */
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    /* Adjust size for smaller screens */
+  }
+
+  /* Timeline item layout adjustment */
+  .timeline-item {
+    min-width: auto;
+    /* Allow timeline items to fill available space */
+  }
+
+  /* Equipment layout adjustments */
+  .equipment {
+    flex-basis: 100%;
+    /* Full width for each equipment item */
+  }
+
+  .showcase-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .showcase-item {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .site-header,
+  .lead,
+  footer {
+    text-align: center;
+  }
+
+  .site-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .site-nav a {
+    margin: 10px 0;
+  }
+
+  .profile,
+  .profile-alt {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .profile,
+  .profile-alt {
+    text-align: center;
+  }
+
+  .equipment {
+    flex: 1 1 100%;
+    /* Full width on small screens */
+    margin: 0 0 10px 0;
+    /* Margin only at the bottom */
+  }
+}
