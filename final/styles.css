@@ -813,6 +813,11 @@ footer {
     text-align: center;
   }
 
+  .lead-display img{
+    width: 400px;
+    height: auto;
+  }
+
   .site-nav {
     flex-direction: column;
     align-items: center;
