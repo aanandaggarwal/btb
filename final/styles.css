@@ -94,8 +94,9 @@ body {
 }
 
 .lead-display img {
-  max-width: 800px;
   height: 100%;
+  width: auto;
+  margin: 0px 20px;
 }
 
 @keyframes textGradient {
@@ -204,7 +205,7 @@ footer {
   text-align: center;
   font-size: 2.5em;
   color: #333;
-  margin-top: 10px;
+  margin: 30px;
 }
 
 .review-article {
@@ -242,12 +243,12 @@ footer {
 }
 
 .essay-image {
-  display: block; 
-  margin: 0 auto; 
+  display: block;
+  margin: 0 auto;
   max-width: 600px;
-  width: 60%; 
-  height: auto; 
-  border-radius: 8px; 
+  width: 60%;
+  height: auto;
+  border-radius: 8px;
 }
 
 
@@ -350,6 +351,8 @@ footer {
 
 .review-details {
   float: right;
+  margin-left: 350px;
+  text-align: right;
 }
 
 .star-rating {
@@ -749,6 +752,7 @@ footer {
   /* Text and heading responsiveness */
   .main-heading,
   .article-title,
+  .showcase h2,
   .showcase-item h3,
   .sidebar h2,
   .timeline-heading {
